@@ -9,8 +9,13 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
+
 const Container = styled.div`
   display: flex;
+  ${mobile({
+    flexDirection: "column",
+  })}
 `;
 
 const Left = styled.div`
@@ -23,11 +28,17 @@ const Left = styled.div`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    backgroundColor: "#fcf5f5",
+  })}
 `;
 
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const Logo = styled.h1``;
@@ -132,17 +143,17 @@ const Footer = () => {
       <Right>
         <Title>Contact </Title>
         <ContactItem>
-          <RoomOutlined style={{marginRight:20}}/>
+          <RoomOutlined style={{ marginRight: 20 }} />
           33/A, Ananya, Telecom Colony, Nt Layout, Mysore Road, Mysore Road,
           Bengaluru, Karnataka 560026
         </ContactItem>
         <ContactItem>
-          <CallOutlined style={{marginRight:20}}/>
+          <CallOutlined style={{ marginRight: 20 }} />
           +919876543210
         </ContactItem>
 
         <ContactItem>
-          <MailOutline style={{marginRight:20}}/>
+          <MailOutline style={{ marginRight: 20 }} />
           contact@1234.com
         </ContactItem>
         <PaymentWrap>
